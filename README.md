@@ -13,6 +13,6 @@ Si no se pasa al siguiente mapa tras haberse acabado el tiempo el jugador habrá
 
 1. Desarrollar un programa que simule un escape room en el cual el jugador pueda explorar los diferentes escenarios e 
 interactuar con los elementos que se le presenten en éstos.
-2. Crear una tabla de clasificación, al finalizar el juego, con un ránking de los mejores tiempos que consiguieron los demás jugadores,
-los cuales anteriormente deberán haber introducido un nick para poder jugar.
+2. Crear una tabla de clasificación, que se exponga al finalizar el juego, con un ránking de los mejores tiempos que consiguieron los demás jugadores,
+los cuales deberán haber introducido anteriormente un nick para poder jugar.
 
