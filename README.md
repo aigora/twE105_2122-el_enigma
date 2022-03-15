@@ -1,7 +1,7 @@
 # [Título del trabajo]
 
-El proyecto consistirá en una serie de mapas en los cuales el jugador deberá buscar pistas, 
-interactuar con objetos y resolver acertijos, dentro de un tiempo limitado, para poder avanzar.
+El proyecto consistirá en una serie de mapas en los cuales el jugador, dentro de un tiempo limitado, deberá buscar pistas, 
+interactuar con objetos y resolver acertijos para poder avanzar.
 Si no se pasa al siguiente mapa tras haberse acabado el tiempo el jugador habrá perdido y el juego habrá terminado.
 
 
