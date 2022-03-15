@@ -8,6 +8,9 @@ Si no se pasa al siguiente mapa tras haberse acabado el tiempo el jugador habrá
 ## Integrantes del equipo
 
 - Ruddy Alejandro Escobar Ordoñez [ruddy02](https://github.com/ruddy02)
+- Manuel Amador Méndez 
+- José Antonio Anampa Quispe 
+- Mykolas Astafjevas 
 
 ## Objetivos del trabajo
 
