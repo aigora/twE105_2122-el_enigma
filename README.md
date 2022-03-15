@@ -1,4 +1,4 @@
-# [Título del trabajo]
+# El Enigma
 
 El proyecto consistirá en una serie de mapas en los cuales el jugador, dentro de un tiempo limitado, deberá buscar pistas, 
 interactuar con objetos y resolver acertijos para poder avanzar.
