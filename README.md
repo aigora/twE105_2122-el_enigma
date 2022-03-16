@@ -8,7 +8,7 @@ Si no se pasa al siguiente mapa tras haberse acabado el tiempo el jugador habrá
 
 - Ruddy Alejandro Escobar Ordoñez [ruddy02](https://github.com/ruddy02)
 - Manuel Amador Méndez 
-- José Antonio Anampa Quispe 
+- José Antonio Anampa Quispe [JoseAnampa](https://github.com/JoseAnampa)
 - Mykolas Astafjevas 
 
 ## Objetivos del trabajo
