@@ -7,7 +7,7 @@ Si no se pasa al siguiente mapa tras haberse acabado el tiempo el jugador habrá
 ## Integrantes del equipo
 
 - Ruddy Alejandro Escobar Ordoñez [ruddy02](https://github.com/ruddy02)
-- Manuel Amador Méndez 
+- Manuel Amador Méndez [manuamador005](https://github.com/manuamador005)
 - José Antonio Anampa Quispe [JoseAnampa](https://github.com/JoseAnampa)
 - Mykolas Astafjevas 
 
