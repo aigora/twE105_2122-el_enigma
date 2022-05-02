@@ -1,20 +1,17 @@
-void mapeado(int n1,int n2,int n3,int n4,int n5,int n6,int n7,int n8,char mapafichero[],int puerta){
+void mapeado(int n1,int n2,int n3,int n4,int n5,int n6,int n7,int n8,char mapafichero[],int p,int pared_vertical,int pared_hor_iz,int pared_hor_der,int q,int pista,int puzzle){
     int techoizda=n1-1,techodcha=n2+1,
         paredizda=n3-1,pareddcha=n4-1,
         sueloizda=n5-1,sueloddcha=n6+1,
-        pos=n7-1,valorfila=n8;
-
-    //paredes dentro del mapa
-    int pared_vertical=152,
-        pared_hor_iz=235,
-        pared_hor_der=255;
-
+        pos=n7-1,valorfila=n8,
+        puerta=p-1;
 
     int apertura=0;
 
     char pregunta[30];
     char letra,texto1[80];
     char fila[80];
+
+    char puzzletexto[80];
 
     FILE *archivo;
     FILE *archivo1;
@@ -27,7 +24,6 @@ void mapeado(int n1,int n2,int n3,int n4,int n5,int n6,int n7,int n8,char mapafi
 
     int simbolo=fgetc(personaje);
 
-
     do{
 
         while(fgets(fila,80,archivo)!=NULL){  //Imprime el mapa contínuamente
@@ -35,7 +31,20 @@ void mapeado(int n1,int n2,int n3,int n4,int n5,int n6,int n7,int n8,char mapafi
             printf("%s",fila);
         }
 
-        if(pos==113){                               //Objeto interactivo que
+        if(pos==puzzle-1){
+            system("cls");
+
+            FILE *puzzle=fopen("puzzle.txt","r");
+            printf("________________________\n");
+            while(fgets(puzzletexto,80,puzzle)){
+                printf("%s",puzzletexto);
+            }
+            printf("\n________________________\n\n");
+            fclose(puzzle);
+        }
+
+
+        if(pos==q-1){                                 //Objeto interactivo que
             printf("\n________________________");   //almacena una cadena de caracteres
             printf("\nHas encontrado algo");
             printf("\n________________________");
@@ -68,7 +77,7 @@ void mapeado(int n1,int n2,int n3,int n4,int n5,int n6,int n7,int n8,char mapafi
             }
         }
 
-        if(pos==60){                                    //Se imprime una pista al pasar por
+        if(pos==pista-1){                                    //Se imprime una pista al pasar por
             printf("\n________________________");       //encima de una posición
             printf("\nEscribe 'hola'");
             printf("\n________________________");
@@ -77,8 +86,10 @@ void mapeado(int n1,int n2,int n3,int n4,int n5,int n6,int n7,int n8,char mapafi
 
         fflush(stdin);
 
-        printf("\n%ld",pos);
-        printf("\n\nPresiona 'A''W''S''D' para moverte o presiona 'f' para salir: ");
+        //printf("\n%ld",pos);
+        printf("\n\nPresiona espacio para ir al menu.");
+        printf("\nPresiona 'A''W''S' o 'D' para moverte o presiona 'f' para salir: ");
+
 
 
         scanf("%c",&letra);
@@ -106,8 +117,14 @@ void mapeado(int n1,int n2,int n3,int n4,int n5,int n6,int n7,int n8,char mapafi
                     fseek(archivo1,pos+1,SEEK_SET);
                     fprintf(archivo1,"%c",' ');
 
-                    fseek(archivo1,60,SEEK_SET);            //Imprime contínuamente
+                    fseek(archivo1,pista-1,SEEK_SET);            //Imprime contínuamente
                     fprintf(archivo1,"%c",'S');             //un símbolo
+
+                    fseek(archivo1,q-1,SEEK_SET);
+                    fprintf(archivo1,"%c",'Q');
+
+                    fseek(archivo1,puzzle-1,SEEK_SET);
+                    fprintf(archivo1,"%c",'?');
 
                     if(apertura==0){
                         fseek(archivo1,puerta,SEEK_SET);
@@ -149,8 +166,14 @@ void mapeado(int n1,int n2,int n3,int n4,int n5,int n6,int n7,int n8,char mapafi
                     fseek(archivo1,pos-1,SEEK_SET);
                     fprintf(archivo1,"%c",' ');
 
-                    fseek(archivo1,60,SEEK_SET);
+                    fseek(archivo1,pista-1,SEEK_SET);
                     fprintf(archivo1,"%c",'S');
+
+                    fseek(archivo1,q-1,SEEK_SET);
+                    fprintf(archivo1,"%c",'Q');
+
+                    fseek(archivo1,puzzle-1,SEEK_SET);
+                    fprintf(archivo1,"%c",'?');
 
                     if(apertura==0){
                         fseek(archivo1,puerta,SEEK_SET);
@@ -180,8 +203,11 @@ void mapeado(int n1,int n2,int n3,int n4,int n5,int n6,int n7,int n8,char mapafi
                 else if(pos+valorfila>pared_hor_iz-2 && pos+valorfila<pared_hor_der){
                     pos=pos;
                 }
-                else if(pos+valorfila==puerta-1){
+                else if((pos+valorfila==puerta-1)||pos+valorfila==puerta+1){
                     pos=pos;
+                }
+                else if((pos==puerta-valorfila) && (apertura==0)){
+                        pos=pos;
                 }
                 else{
                     fseek(archivo1,pos+valorfila,SEEK_SET);
@@ -196,8 +222,14 @@ void mapeado(int n1,int n2,int n3,int n4,int n5,int n6,int n7,int n8,char mapafi
                     pareddcha+=valorfila;
                     paredizda+=valorfila;
 
-                    fseek(archivo1,60,SEEK_SET);
+                    fseek(archivo1,pista-1,SEEK_SET);
                     fprintf(archivo1,"%c",'S');
+
+                    fseek(archivo1,q-1,SEEK_SET);
+                    fprintf(archivo1,"%c",'Q');
+
+                    fseek(archivo1,puzzle-1,SEEK_SET);
+                    fprintf(archivo1,"%c",'?');
 
                     if(apertura==0){
                         fseek(archivo1,puerta,SEEK_SET);
@@ -245,9 +277,14 @@ void mapeado(int n1,int n2,int n3,int n4,int n5,int n6,int n7,int n8,char mapafi
                     pareddcha-=valorfila;
                     paredizda-=valorfila;
 
-                    fseek(archivo1,60,SEEK_SET);
+                    fseek(archivo1,pista-1,SEEK_SET);
                     fprintf(archivo1,"%c",'S');
 
+                    fseek(archivo1,q-1,SEEK_SET);
+                    fprintf(archivo1,"%c",'Q');
+
+                    fseek(archivo1,puzzle-1,SEEK_SET);
+                    fprintf(archivo1,"%c",'?');
 
                     if(apertura==0){
                         fseek(archivo1,puerta,SEEK_SET);
@@ -265,6 +302,10 @@ void mapeado(int n1,int n2,int n3,int n4,int n5,int n6,int n7,int n8,char mapafi
                     printf("%s",texto1);
                 }
                 fclose(archivo2);
+            break;
+            case ' ':
+                system("cls");
+                return main();
             break;
             default:
             break;

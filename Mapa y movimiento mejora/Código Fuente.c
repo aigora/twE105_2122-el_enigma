@@ -31,11 +31,11 @@ int main(){
                 switch(nmapa){
                     case 1:
                         system("cls");
-                        mapeado(1,31,133,163,298,328,146,33,"mapa1.txt",55);
+                        mapeado(1,31,166,196,298,328,185,33,"mapa1.txt",55,145,108,123,258,70,80);
                     break;
                     case 2:
                         system("cls");
-                        mapeado(1,31,133,163,298,328,146,33,"mapa2.txt",50);
+                        mapeado(1,31,166,196,298,328,185,33,"mapa2.txt",266,145,238,255,258,61,80);
                     break;
                     default:
                     break;
@@ -45,19 +45,26 @@ int main(){
         case 2:                                                 //Personalizar
             system("cls");
             printf("Selecciona a tu personaje");
-            printf("\n\t1-A\n\t2-M\n");
+            printf("\n\t1 +\n\t2 Ñ\n\t3 $\n");
             scanf("%i",&seleccion);
             if(seleccion==1){
                 system("cls");
                 FILE *prueba=fopen("personaje.txt","w");
-                fprintf(prueba,"%c",'A');
+                fprintf(prueba,"%c",'+');
                 fclose(prueba);
                 return main();
             }
             else if(seleccion==2){
                 system("cls");
                 FILE *prueba=fopen("personaje.txt","w");
-                fprintf(prueba,"%c",'M');
+                fprintf(prueba,"%c",'Ñ');
+                fclose(prueba);
+                return main();
+            }
+            else if(seleccion==3){
+                system("cls");
+                FILE *prueba=fopen("personaje.txt","w");
+                fprintf(prueba,"%c",'$');
                 fclose(prueba);
                 return main();
             }else{
