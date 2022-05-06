@@ -1,15 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-//#include <threads.h>
 
 void delay( float seconds);
 
 
 int main()
 {
-    int horas, minutos, segundos;
-    scanf("%i %i %i", &horas, &minutos, &segundos);
+    int horas = 0, minutos = 0, segundos = 5;
     printf("Toca cualquier tecla para iniciar la partida: ");
     system("pause ->NUL");
     while(1)
@@ -46,7 +44,7 @@ int main()
         else
             printf("\t\t\t\t\t\t[ %i:%i:%i ]", horas, minutos, segundos);
 
-        //printf("\t\t\t\t\t\t[ %i:%i:%i ]", horas, minutos, segundos);
+
         delay(1);
 
         if((segundos == 0) && (minutos == 0) && (horas == 0))
