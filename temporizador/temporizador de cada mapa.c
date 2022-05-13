@@ -2,15 +2,14 @@
 #include <stdlib.h>
 #include <time.h>
 
-void delay( float seconds);
+void delay(float seconds);
 
 
 int main()
 {
     int horas = 0, minutos = 0, segundos = 5;
-    printf("Toca cualquier tecla para iniciar la partida: ");
-    system("pause ->NUL");
-    while(1)
+
+    while(((segundos != 0) || (minutos != 0) || (horas != 0)))
     {
         segundos--;
         if((segundos == -1) && (minutos > 0)){
@@ -25,7 +24,9 @@ int main()
             }
 
 
-        system("cls");
+        printf("\x1b[2J");
+
+
         if(((segundos < 10) && (segundos >= 0)) && ((minutos < 10) && (minutos >= 0)) && ((horas < 10) && (horas >= 0)))
             printf("\t\t\t\t\t\t[ 0%i:0%i:0%i ]", horas, minutos, segundos);
         else if(((segundos < 10) && (segundos >= 0)) && ((minutos < 10) && (minutos >= 0)))
@@ -47,14 +48,13 @@ int main()
 
         delay(1);
 
-        if((segundos == 0) && (minutos == 0) && (horas == 0))
-            break;
+
     }
     printf(" \nSE ACABO EL TIEMPO. HAS PERDIDO\n");
 
     return 0;
 }
-void delay( float seconds)
+void delay(float seconds)
 {
     int milli_seconds = 1000 * seconds;
     clock_t start_time = clock();
