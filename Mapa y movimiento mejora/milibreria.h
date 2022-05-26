@@ -26,8 +26,8 @@ void mapeado(int n1,int n2,int n3,int n4,int n5,int n6,int n7,int n8,char mapafi
 
     do{
 
-        while(fgets(fila,80,archivo)!=NULL){  //Imprime el mapa contínuamente
-            fputs(fila,archivo1);             //por líneas
+        while(fgets(fila,80,archivo)!=NULL){  //Imprime el mapa contÃ­nuamente
+            fputs(fila,archivo1);             //por lÃ­neas
             printf("%s",fila);
         }
 
@@ -67,7 +67,7 @@ void mapeado(int n1,int n2,int n3,int n4,int n5,int n6,int n7,int n8,char mapafi
         }
 
         if(pos==puerta){                                    //Se imprime una pista al pasar por
-            if(apertura==1){                                //encima de una posición al haberla
+            if(apertura==1){                                //encima de una posiciÃ³n al haberla
                 printf("\n________________________");       //desbloqueado antes
                 printf("\nHas conseguido salir\n");
                 printf("________________________\n");
@@ -78,10 +78,45 @@ void mapeado(int n1,int n2,int n3,int n4,int n5,int n6,int n7,int n8,char mapafi
         }
 
         if(pos==pista-1){                                    //Se imprime una pista al pasar por
-            printf("\n________________________");       //encima de una posición
+            printf("\n________________________");       //encima de una posiciÃ³n
             printf("\nEscribe 'hola'");
             printf("\n________________________");
         }
+        
+        if(pos==puerta){                                     // Se imprime una pista al pasar
+            if(apertura){                                    // por encima de una posiciÃ³n al 
+                printf("\n________________________");        //haberla esbloqueado.
+                printf("ÂªnHas conseguido salir\n");
+                printf("________________________\n");
+                
+                    FILE *puntuacion=fopen("tabla.txt","a");
+                
+                    fprintf(puntuacion,"%s",nombres);
+                    fprintf(puntuacion,"%c",'\t');
+                    fprintf(puntuacion,"%i",puntos);
+                    fprintf(puntuacion,"%c",'\n');
+                
+                    fclose(puntuacion);
+                
+                system("pause");
+                
+                if(contdemapas==mapmax){
+                    system("cls");
+                    FILE *ranking=fopen("tabla.txt","r");
+                    while(fgets(rankers,80,ranking)!=NULL) {
+                        printf("%s",rankers);
+                    }
+                    fclose(ranking);
+                    return 0;
+                }
+                else{
+                    system("cls");
+                    return main();
+                }
+                
+            }
+        }
+                        
 
 
         fflush(stdin);
@@ -117,8 +152,8 @@ void mapeado(int n1,int n2,int n3,int n4,int n5,int n6,int n7,int n8,char mapafi
                     fseek(archivo1,pos+1,SEEK_SET);
                     fprintf(archivo1,"%c",' ');
 
-                    fseek(archivo1,pista-1,SEEK_SET);            //Imprime contínuamente
-                    fprintf(archivo1,"%c",'S');             //un símbolo
+                    fseek(archivo1,pista-1,SEEK_SET);            //Imprime contÃ­nuamente
+                    fprintf(archivo1,"%c",'S');             //un sÃ­mbolo
 
                     fseek(archivo1,q-1,SEEK_SET);
                     fprintf(archivo1,"%c",'Q');
