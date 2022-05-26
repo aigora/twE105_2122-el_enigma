@@ -1,0 +1,16 @@
+Pista 1
+Te das cuenta de que se han ido y puedes investigar en lo que
+estaban trabajando y tambien aprovechas para buscar el ultimo 
+codigo.
+Remueves unos papeles y encuentras una pista de cuales son los primeros dos digitos
+de un codigo de cinco digitos.
+Observas que tienes que adivinar la edad del capo de la mafia.
+
+Tienes que hacer el siguiente determinante:
+
+           
+| 1   0   0 |
+| 0  19/2 0 |   = ?
+| 2   0  2  |
+
+
