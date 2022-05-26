@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include "milibreria.h"
+#include "libreria.h"
 #define N 50
 #define M 3
 
@@ -13,6 +13,7 @@ typedef struct{
     char opcion3[N];
     char texto3[N];
     char pista[N];
+    char codigo[N];
 }opciones;
 
 int main(){
@@ -30,23 +31,12 @@ int main(){
     //puzzles mapa1
     strcpy(T[1].opcion1,"opcion1");
     strcpy(T[1].texto1,"texto1");
-    strcpy(T[1].opcion2,"opcion2");
+    strcpy(T[1].opcion2,"52");
     strcpy(T[1].texto2,"texto2");
     strcpy(T[1].opcion3,"opcion3");
     strcpy(T[1].texto3,"texto3");
-    strcpy(T[1].pista,"pista");
-
-
-
-
-
-
-
-
-
-
-    int codigo="19252";
-
+    strcpy(T[1].pista,"correcto");
+    strcpy(T[1].codigo,"codigo");
 
     printf("1-Comenzar\n");
     printf("2-Personalizar\n");
@@ -76,24 +66,26 @@ int main(){
                         historia=fopen("historia1.txt","r");
                             if(historia==NULL){
                                 printf("No se encontro el archivo de la historia\n\n");
+                                return -1;
                             }
                             else{
                                 while(fgets(Historia,300,historia)){
                                     printf("%s",Historia);
-                                }
-                                printf("\n\n");                                 //techo izda, techo drcha, pared izda, pared drcha, suelo izda, suelo drcha, posicion, valor de la fila, nombre del mapa
-                            }                                                   //posicion de la puerta, pos de pared vertical superior, pos de pared horizontal izda, pos pared horizontal drcha
-                        fclose(historia);                                       //pos de la respuesta 1, de la respuesta 2, de la respuesta 3, nombres de los archivos de las pistas 1,2 y 3
-                                                                                //textos del archivo de la pista 1, de la pista 2, de la pista 3
-                        system("pause");                                        //mapas maximos creados, numero de mapa actual, nombre para la tabla(se pide al comenzar el juego), puntos otorgados por mapa
-                        system("cls");                                          //textos de opcion1, opcion2, opcion3, opcionCorrecta, pista y el codigo
-                        mapeado(1,31,166,196,298,328,185,33,"mapa1.txt",55,145,108,123,258,70,80,"puzzle11.txt","puzzle21.txt","puzzle31.txt",3,1,nombre,10,T[1].opcion1,T[1].texto1,T[1].opcion2,T[1].texto2,T[1].opcion3,T[1].texto3,T[1].pista,codigo);
+                                }                                               //techo izda, techo drcha, pared izda, pared drcha, suelo izda, suelo drcha, posicion, valor de la fila, nombre del mapa
+                                printf("\n\n");                                 //posicion de la puerta, pos de pared vertical superior, pos de pared horizontal izda, pos pared horizontal drcha
+                            }                                                   //pos de la respuesta 1, de la respuesta 2, de la respuesta 3, nombres de los archivos de las pistas 1,2 y 3
+                        fclose(historia);                                       //textos del archivo de la pista 1, de la pista 2, de la pista 3
+                                                                                //mapas maximos creados, numero de mapa actual, nombre para la tabla(se pide al comenzar el juego), puntos otorgados por mapa
+                        pause();                                                //textos de opcion1, opcion2, opcion3, opcionCorrecta, pista y el codigo
+                        system("cls");
+                        mapeado(1,31,166,196,298,328,185,33,"mapa1.txt",55,145,108,123,258,70,80,"puzzle11.txt","puzzle21.txt","puzzle31.txt",3,1,nombre,10,T[1].opcion1,T[1].texto1,T[1].opcion2,T[1].texto2,T[1].opcion3,T[1].texto3,T[1].pista,T[1].codigo);
                     break;
                     case 2:
                         system("cls");
                         historia=fopen("historia2.txt","r");
                             if(historia==NULL){
                                 printf("No se encontro el archivo de la historia\n\n");
+                                return -1;
                             }
                             else{
                                 while(fgets(Historia,300,historia)){
@@ -103,16 +95,17 @@ int main(){
                             }
                         fclose(historia);
 
-                        system("pause");
+                        pause();
                         system("cls");
 
-                        mapeado(1,31,166,196,298,328,185,33,"mapa2.txt",266,145,238,255,258,61,80,"puzzle12.txt","puzzle22.txt","puzzle32.txt",3,2,nombre,20,T[1].opcion1,T[1].texto1,T[1].opcion2,T[1].texto2,T[1].opcion3,T[1].texto3,T[1].pista,codigo);
+                        mapeado(1,31,166,196,298,328,185,33,"mapa2.txt",266,145,238,255,258,61,80,"puzzle12.txt","puzzle22.txt","puzzle32.txt",3,2,nombre,20,T[1].opcion1,T[1].texto1,T[1].opcion2,T[1].texto2,T[1].opcion3,T[1].texto3,T[1].pista,T[1].codigo);
                     break;
                     case 3:
                         system("cls");
                         historia=fopen("historia3.txt","r");
                             if(historia==NULL){
                                 printf("No se encontro el archivo de la historia\n\n");
+                                return -1;
                             }
                             else{
                                 while(fgets(Historia,300,historia)){
@@ -122,10 +115,10 @@ int main(){
                             }
                         fclose(historia);
 
-                        system("pause");
+                        pause();
                         system("cls");
 
-                        mapeado(1,44,185,228,553,596,209,46,"mapa3.txt",338,102,377,403,499,97,131,"puzzle13.txt","puzzle23.txt","puzzle33.txt",3,3,nombre,30,T[1].opcion1,T[1].texto1,T[1].opcion2,T[1].texto2,T[1].opcion3,T[1].texto3,T[1].pista,codigo);
+                        mapeado(1,44,185,228,553,596,209,46,"mapa3.txt",338,102,377,403,499,97,131,"puzzle13.txt","puzzle23.txt","puzzle33.txt",3,3,nombre,30,T[1].opcion1,T[1].texto1,T[1].opcion2,T[1].texto2,T[1].opcion3,T[1].texto3,T[1].pista,T[1].codigo);
                     break;
                     default:
                     break;

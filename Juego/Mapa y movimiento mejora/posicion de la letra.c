@@ -2,9 +2,10 @@
 
 int main(){
     char letra;
+    char mapa[]="mapa3.txt";
 
     FILE *archivo;
-    archivo=fopen("mapa1.txt","r");
+    archivo=fopen(mapa,"r");
 
     do{
         int car=fgetc(archivo);
