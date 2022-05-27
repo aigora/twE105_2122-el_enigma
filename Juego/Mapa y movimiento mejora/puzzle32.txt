@@ -1,5 +1,0 @@
-Pista 3
-Buscando cerca de la puerta encuentras en el manillar de la puerta 
-una pista correspondiente al quinto numero del codigo, dice lo siguiente:
-
-sumale uno al numero de pisos que has bajado.

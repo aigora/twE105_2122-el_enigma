@@ -1,0 +1,13 @@
+Pista 1
+Te das cuenta de que se han ido y puedes investigar en lo que
+estaban trabajando.
+
+Remueves unos papeles y encuentras un papel con un determinante por resolver.
+Al parecer se trata de la edad del capo de la mafia, todo un enigma...
+
+           
+| 1   0   0 |
+| 0  30/2 0 |   = ?
+| 2   0  2  |
+
+

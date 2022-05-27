@@ -1,0 +1,23 @@
+Pista 3
+
+Ves un periodico y parece que hay una mafia 
+que esta secuestrando personas.
+ _____________________
+|                     |         
+|   ~~~~~~~~~~~~~~    |
+|   ~~~~~~~~~~~~~~    |
+|   ~~~~~~~~~~~~~~    |
+|   ~~~~~~~~~~~~~~    |
+|   ~~~~~~~~~~~~~~    |
+|   ~~~~~~~~~~~~~~    |
+|   ~~~~~~~~~~~~~~    |
+|_____________________|
+
+El periodico pone:
+
+"45 integrantes del misterioso grupo de la mafia
+han sido capturados hace un tiempo en lo que parece 
+ser su base de operaciones, el rascacielos Cepsa
+en el Paseo de la Castellana, 259, A.
+Por otro lado, el jefe de este grupo sigue sin aparecer,
+es todo un ENIGMA"

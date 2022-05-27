@@ -1,0 +1,22 @@
+Pista 2
+
+Encuentras una mesa.
+ //||||||||||||||||||||||\\
+||                        ||
+||        =======         ||
+||       | ----- |        ||
+||       | ----- |        ||
+||       | ----- |        ||
+||        =======         ||
+||                        ||
+ \\||||||||||||||||||||||//
+Notas que hay una tabla con uno botones. Parece que hay que
+presionar una combinacion para que se active.
+Por ejemplo una posible respuesta seria: 41 (columa 4, fila 1)
+
+  123456789
+0 OOOOOOOCO
+1 OOOOOOOOO
+2 OOOOOOOOO
+3 OOOOOOOOO
+4 OOOOOOOOO

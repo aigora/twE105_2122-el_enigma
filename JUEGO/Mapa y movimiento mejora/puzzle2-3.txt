@@ -1,0 +1,16 @@
+Pista 3
+
+Buscando por la habitacion encuentras un numero pintado
+en una de las paredes entre otros raros dibujos
+
+_______________________________
+ >>>>                 %^@
+
+ª 	    ?    ?	
+            ?    ?	 (o)
+    $$      ??????
+    $$           ?
+            a    ?      
+&		       \x1b[2J
+	xq
+_______________________________

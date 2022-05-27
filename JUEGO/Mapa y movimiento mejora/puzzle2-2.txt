@@ -1,0 +1,28 @@
+Pista 2
+
+Buscando por la mesa encuentras una hoja
+ ________________
+|                |
+|   ~~~~~~~~~~   |
+|   ~~~~~~~~~~   |
+|   ~~~~~~~~~~   |
+|   ~~~~~~~~~~	 |
+|________________|
+
+En la hoja esta anotado:
+ ____________________________________
+|                                    |
+| "No te olvides de la password,     |
+| si lo haces no podras salir de ahi.|
+| Recuerda que solo hay una misma    |
+| password por cada piso"	     |
+|____________________________________|
+
+Por la parte de atras de la hora escuentras un acertijo.
+
+El year en el que se descubrio America mas el numero 508
+es tu unica esperanza.
+
+
+
+

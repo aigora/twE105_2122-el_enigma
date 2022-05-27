@@ -1,0 +1,18 @@
+Pista 1
+
+Has encontrado un portatil encima de una mesa.
+Ves que tiene una pasword de cinco digitos.
+ ____________________
+|                    |
+|                    |
+|      pasword:      |
+|                    |
+|       -----        |
+|____________________|
+ \                   \ 
+  \                   \
+   \    w              \
+    \ a s d             \
+     \                   \
+      \___________________\
+       

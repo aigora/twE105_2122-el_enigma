@@ -1,0 +1,9 @@
+Pista 2
+
+De repente se escucha un ruido. Han descubierto que no estas, vienen a por ti.
+Ves que en la habitacion una puerta, un escritorio con papeles, y una television.
+A donde vas?
+
+-Puerta
+-Escritorio
+-TV

@@ -3,7 +3,7 @@
 #include <string.h>
 
 
-void mapeado(int n1,int n2,int n3,int n4,int n5,int n6,int n7,int n8,char mapafichero[],int p,int pared_vertical,int pared_hor_iz,int pared_hor_der,int pista1,int pista2,int pista3,char puzzle1[],char puzzle2[],char puzzle3[],int mapmax,int contdemapas,char nombres[],int puntos,char opcion1[],char texto1[],char opcion2[],char texto2[],char opcion3[],char texto3[],char pista[],char codigo[]){
+void mapeado(int n1,int n2,int n3,int n4,int n5,int n6,int n7,int n8,char mapafichero[],int p,int pared_vertical,int pared_hor_iz,int pared_hor_der,int pista1,int pista2,int pista3,char puzzle1[],char puzzle2[],char puzzle3[],int mapmax,int contdemapas,char nombres[],int puntos,char opcion1p1[],char texto1p1[],char opcion2p1[],char texto2p1[],char opcion3p1[],char texto3p1[],char opcion1p2[],char texto1p2[],char opcion2p2[],char texto2p2[],char opcion3p2[],char texto3p2[],char opcion1p3[],char texto1p3[],char opcion2p3[],char texto2p3[],char opcion3p3[],char texto3p3[],char codigo[]){
     int techoizda=n1-1,techodcha=n2+1,
         paredizda=n3-1,pareddcha=n4-1,
         sueloizda=n5-1,sueloddcha=n6+1,
@@ -57,7 +57,7 @@ void mapeado(int n1,int n2,int n3,int n4,int n5,int n6,int n7,int n8,char mapafi
                 printf("\n\n");
                 char respuesta[20];
                 scanf("%s",respuesta);
-                Opciones(respuesta,opcion1,opcion2,opcion3,pista,texto1,texto2,texto3,1);
+                Opciones(respuesta,opcion1p1,opcion2p1,opcion3p1,texto1p1,texto2p1,texto3p1);
             }
 
             if(pos==pista2-1){
@@ -69,7 +69,7 @@ void mapeado(int n1,int n2,int n3,int n4,int n5,int n6,int n7,int n8,char mapafi
                 printf("\n\n");
                 char respuesta[20];
                 scanf("%s",respuesta);
-                Opciones(respuesta,opcion1,opcion2,opcion3,pista,texto1,texto2,texto3,2);
+                Opciones(respuesta,opcion1p2,opcion2p2,opcion3p2,texto1p2,texto2p2,texto3p2);
             }
 
             if(pos==pista3-1){
@@ -81,7 +81,7 @@ void mapeado(int n1,int n2,int n3,int n4,int n5,int n6,int n7,int n8,char mapafi
                 printf("\n\n");
                 char respuesta[20];
                 scanf("%s",respuesta);
-                Opciones(respuesta,opcion1,opcion2,opcion3,pista,texto1,texto2,texto3,3);
+                Opciones(respuesta,opcion1p3,opcion2p3,opcion3p3,texto1p3,texto2p3,texto3p3);
 
             }
 
@@ -362,43 +362,16 @@ void imprimeArchivo(FILE *archivo){
     }
 }
 
-void Opciones(char eleccion[],char opcion1[],char opcion2[],char opcion3[],char pista[],char texto1[],char texto2[],char texto3[],int n){
-    switch(n){
-        case 1:
-            if(strcmp(eleccion,opcion1)==0){
-                printf("%s\n",pista);
-            }
-            else if(strcmp(eleccion,opcion2)==0){
-                printf("%s\n",texto2);
-            }
-            else if(strcmp(eleccion,opcion3)==0){
-                printf("%s\n",texto3);
-            }
-        break;
-        case 2:
-            if(strcmp(eleccion,opcion1)==0){
-                printf("%s\n",texto1);
-            }
-            else if(strcmp(eleccion,opcion2)==0){
-                printf("%s\n",pista);
-            }
-            else if(strcmp(eleccion,opcion3)==0){
-                printf("%s\n",texto3);
-            }
-        break;
-        case 3:
-            if(strcmp(eleccion,opcion1)==0){
-                printf("%s\n",texto1);
-            }
-            else if(strcmp(eleccion,opcion2)==0){
-                printf("%s\n",texto2);
-            }
-            else if(strcmp(eleccion,opcion3)==0){
-                printf("%s\n",pista);
-            }
-        break;
+void Opciones(char eleccion[],char opcion1[],char opcion2[],char opcion3[],char texto1[],char texto2[],char texto3[]){
+    if(strcmp(eleccion,opcion1)==0){
+        printf("%s\n",texto1);
     }
-
+    else if(strcmp(eleccion,opcion2)==0){
+        printf("%s\n",texto2);
+    }
+    else if(strcmp(eleccion,opcion3)==0){
+        printf("%s\n",texto3);
+    }
 }
 
 void pause(){
@@ -409,4 +382,13 @@ void pause(){
     while(c!='\n'){
         c=getchar();
     }
+}
+
+void asignarTexto(char op1[],char t1[], char cop1[],char ct1[],char op2[],char t2[], char cop2[],char ct2[],char op3[],char t3[], char cop3[],char ct3[]){
+    strcpy(op1,cop1);
+    strcpy(op2,cop2);
+    strcpy(op3,cop3);
+    strcpy(t1,ct1);
+    strcpy(t2,ct2);
+    strcpy(t3,ct3);
 }
