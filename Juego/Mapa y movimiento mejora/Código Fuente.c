@@ -114,11 +114,11 @@ int main(){
 
     //puzzle3
     strcpy(T[9].opcion1,"Enigma");
-    strcpy(T[9].texto1,"Correcto");
+    strcpy(T[9].texto1,"Correcto. El ultimo digito del codigo es 4");
     strcpy(T[9].opcion2,"enigma");
-    strcpy(T[9].texto2,"Correcto");
+    strcpy(T[9].texto2,"Correcto. El ultimo digito del codigo es 4");
     strcpy(T[9].opcion3,"ENIGMA");
-    strcpy(T[9].texto3,"Correcto");
+    strcpy(T[9].texto3,"Correcto. El ultimo digito del codigo es 4");
 
     printf("1-Comenzar\n");
     printf("2-Personalizar\n");
