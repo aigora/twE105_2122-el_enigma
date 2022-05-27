@@ -1,7 +1,6 @@
 # El Enigma
 
-El proyecto consistirá en una **serie de mapas** en los cuales el jugador deberá _buscar pistas_, _interactuar con objetos_, _resolver acertijos_ y completar la historia para poder avanzar.
-
+El proyecto consistirá en una **serie de mapas** en los cuales el jugador deberá _buscar pistas_, _interactuar con objetos_ y _resolver acertijos_ para completar la historia.
 
 
 
