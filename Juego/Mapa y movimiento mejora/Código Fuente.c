@@ -97,28 +97,30 @@ int main(){
 
     //mapa3
     //puzzle1
-    strcpy(T[7].opcion1,"30");
-    strcpy(T[7].texto1,"Correcto");
-    strcpy(T[7].opcion2,"");
-    strcpy(T[7].texto2,"");
-    strcpy(T[7].opcion3,"");
-    strcpy(T[7].texto3,"");
+    strcpy(T[7].opcion1,"Enigma");
+    strcpy(T[7].texto1,"Correcto. El ultimo digito del codigo es 4");
+    strcpy(T[7].opcion2,"enigma");
+    strcpy(T[7].texto2,"Correcto. El ultimo digito del codigo es 4");
+    strcpy(T[7].opcion3,"ENIGMA");
+    strcpy(T[7].texto3,"Correcto. El ultimo digito del codigo es 4");
+
 
     //puzzle2
-    strcpy(T[8].opcion1,"Puerta");
-    strcpy(T[8].texto1,"Esta cerrada");
-    strcpy(T[8].opcion2,"Escritorio");
-    strcpy(T[8].texto2,"Encuentras un papel con el codigo incompleto _ _ 2 0 _");
-    strcpy(T[8].opcion3,"TV");
-    strcpy(T[8].texto3,"'La policia tiene rodeado el edificio. Al parecer un policia en cubierto fue capturado'");
+    strcpy(T[8].opcion1,"30");
+    strcpy(T[8].texto1,"Correcto");
+    strcpy(T[8].opcion2,"");
+    strcpy(T[8].texto2,"");
+    strcpy(T[8].opcion3,"");
+    strcpy(T[8].texto3,"");
+
 
     //puzzle3
-    strcpy(T[9].opcion1,"Enigma");
-    strcpy(T[9].texto1,"Correcto. El ultimo digito del codigo es 4");
-    strcpy(T[9].opcion2,"enigma");
-    strcpy(T[9].texto2,"Correcto. El ultimo digito del codigo es 4");
-    strcpy(T[9].opcion3,"ENIGMA");
-    strcpy(T[9].texto3,"Correcto. El ultimo digito del codigo es 4");
+    strcpy(T[9].opcion1,"Puerta");
+    strcpy(T[9].texto1,"Esta cerrada");
+    strcpy(T[9].opcion2,"Escritorio");
+    strcpy(T[9].texto2,"Encuentras un papel con el codigo incompleto _ _ 2 0 _");
+    strcpy(T[9].opcion3,"TV");
+    strcpy(T[9].texto3,"'La policia tiene rodeado el edificio. Al parecer un policia en cubierto fue capturado'");
 
     printf("1-Comenzar\n");
     printf("2-Personalizar\n");
@@ -159,7 +161,7 @@ int main(){
                             }                                                   //pos de la respuesta 1, de la respuesta 2, de la respuesta 3, nombres de los archivos de las pistas 1,2 y 3
                         fclose(historia);                                       //textos del archivo de la pista 1, de la pista 2, de la pista 3
                                                                                 //mapas maximos creados, numero de mapa actual, nombre para la tabla(se pide al comenzar el juego), puntos otorgados por mapa
-                        pause();                                                //textos de opcion1, opcion2, opcion3, opcionCorrecta, pista y el codigo
+                        pause();                                                //textos de opciones y respuestas de los puzzles, codigo
                         system("cls");
 
                         asignarTexto(op1p1,t1p1,T[1].opcion1,T[1].texto1,op2p1,t2p1,T[1].opcion2,T[1].texto2,op3p1,t3p1,T[1].opcion3,T[1].texto3);
@@ -214,7 +216,7 @@ int main(){
                         asignarTexto(op1p2,t1p2,T[8].opcion1,T[8].texto1,op2p2,t2p2,T[8].opcion2,T[8].texto2,op3p2,t3p2,T[8].opcion3,T[8].texto3);
                         asignarTexto(op1p3,t1p3,T[9].opcion1,T[9].texto1,op2p3,t2p3,T[9].opcion2,T[9].texto2,op3p3,t3p3,T[9].opcion3,T[9].texto3);
 
-                        mapeado(1,44,185,228,553,596,209,46,"mapa3.txt",338,102,377,403,499,97,131,"puzzle3-1.txt","puzzle3-2.txt","puzzle3-3.txt",3,3,nombre,30,op1p1,t1p1,op2p1,t2p1,op3p1,t3p1,op1p2,t1p2,op2p2,t2p2,op3p2,t3p2,op1p3,t1p3,op2p3,t2p3,op3p3,t3p3,codigos[3].codigo);
+                        mapeado(1,44,185,228,553,596,209,46,"mapa3.txt",338,102,377,403,97,131,499,"puzzle3-1.txt","puzzle3-2.txt","puzzle3-3.txt",3,3,nombre,30,op1p1,t1p1,op2p1,t2p1,op3p1,t3p1,op1p2,t1p2,op2p2,t2p2,op3p2,t3p2,op1p3,t1p3,op2p3,t2p3,op3p3,t3p3,codigos[3].codigo);
                     break;
                     default:
                     break;
