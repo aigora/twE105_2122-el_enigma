@@ -10,7 +10,7 @@ Encuentras una mesa.
 ||        =======         ||
 ||                        ||
  \\||||||||||||||||||||||//
-Notas que hay una tabla con uno botones. Parece que hay que
+Notas que hay una tabla con unos botones. Parece que hay que
 presionar una combinacion para que se active.
 Por ejemplo una posible respuesta seria: 41 (columa 4, fila 1)
 
