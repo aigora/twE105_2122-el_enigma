@@ -62,10 +62,10 @@ int main(){
     //puzzle3
     strcpy(T[3].opcion1,"45");
     strcpy(T[3].texto1,"Es parte del codigo");
-    strcpy(T[3].opcion2,"Servidor1");
-    strcpy(T[3].texto2,"No hay nada raro");
-    strcpy(T[3].opcion3,"Servidor3");
-    strcpy(T[3].texto3,"No hay nada raro");
+    strcpy(T[3].opcion2,"");
+    strcpy(T[3].texto2,"");
+    strcpy(T[3].opcion3,"");
+    strcpy(T[3].texto3,"");
 
 
 
