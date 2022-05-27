@@ -1,10 +1,9 @@
-Pista 3
-Se oyen ruidos en el ascensor estan a punto de llegar!!
+Pista 2
 
-Nervioso corres hacia una mesa y encuentras un maletin donde descubres
-que la mafia realmente queria ver como reaccionaba la gente ante su secuestro y 
-te da un ultimo acertijo para resolver:
+De repente se escucha un ruido. Han descubierto que no estas, vienen a por ti.
+Ves que en la habitacion una puerta, un escritorio con papeles, y una television.
+A donde vas?
 
-Significa misterio, sin embargo, todo el mundo sabe que la mafia es nombrada de
-esta manera
-
+-Puerta
+-Escritorio
+-TV
