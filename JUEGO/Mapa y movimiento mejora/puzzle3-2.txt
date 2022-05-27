@@ -1,9 +1,13 @@
-Pista 3
-Se oyen ruidos en el ascensor estan a punto de llegar!!
+Pista 1
+Te das cuenta de que se han ido y puedes investigar en lo que
+estaban trabajando.
 
-Nervioso corres hacia una mesa y encuentras un maletin donde descubres
-que la mafia realmente queria ver como reaccionaba la gente ante su secuestro y 
-te da un ultimo acertijo para resolver:
+Remueves unos papeles y encuentras un papel con un determinante por resolver.
+Al parecer se trata de la edad del capo de la mafia, todo un enigma...
 
-Significa misterio, sin embargo, todo el mundo sabe que la mafia es nombrada de
-esta manera
+           
+| 1   0   0 |
+| 0  30/2 0 |   = ?
+| 2   0  2  |
+
+
